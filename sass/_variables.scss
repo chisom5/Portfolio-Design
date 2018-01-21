@@ -1,0 +1,20 @@
+// ==================================
+// variables can be used for all types of values
+// ==================================
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family: sans-serif;
+//colors
+$color-white:#ffffff !default;
+$color-lightWhite:#F9F9F9;
+$color-black:#000000;
+$color-lightGreen: #24b662;
+$color-lightRed: #e05c1f;
+// ==================================
+// Media queries breakpoints
+// ==================================
+//
+//Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+$screen-xs-min: 480px !default;
+// Small screen / tablet

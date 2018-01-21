@@ -1,0 +1,13 @@
+    @media (max-width: 767px) {
+        #nav-navbar .nav-menuItem,
+        #nav-navbar .navbar-collapse {
+            width: 100%;
+        }
+        .navbar-collapse {
+            background: rgba(56, 56, 56, 0.95);
+            border-color: rgb(70, 70, 70);
+            @include position($position: absolute, $left: 0px);
+            z-index: 1;
+            @include size($width: 100%)
+        }
+    }

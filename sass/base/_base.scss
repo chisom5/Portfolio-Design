@@ -1,0 +1,56 @@
+/*------------------------------------------------------------------
+      [The "base.scss" contains basic default element styles such as 
+      (colors, typography, margins & padding)
+and you make use of the variables declare previously and mixins as well here.]
+------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =============== DEFAULT HTML - LINK STYLES =============== */
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: $color-white;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &:hover,
+     :focus,
+     :active {
+        color: $color-white;
+        background: none !important;
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+
+/* =============== DEFAULT HTML - LIST STYLES =============== */
+
+ul,
+ul li,
+ol,
+ol li,
+p,
+form,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul,
+ul li {
+    list-style: none;
+}

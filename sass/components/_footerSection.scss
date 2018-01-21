@@ -1,0 +1,21 @@
+footer {
+    background: $color-black;
+    @include position($position: relative, $top: 750px);
+    @include size($width: 100%);
+    .footer {
+        @include padding($left: 40px, $right: 40px);
+    }
+    .text-center {
+        h5 {
+            color: $color-lightRed;
+        }
+        span {
+            color: $color-lightRed;
+            @include font($size: 13px);
+        }
+        p {
+            color: $color-lightRed;
+            @include font($size: 14px);
+        }
+    }
+}

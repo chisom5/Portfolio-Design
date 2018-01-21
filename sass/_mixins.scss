@@ -1,0 +1,56 @@
+// once mixins is done to use it you make use of @include mixins name (together with the parameters here)
+// --------------------------------------------------
+// Positioning
+// --------------------------------------------------
+// eg: @include position(absolute, $top: 5px, $left: 5px);
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+//Sizing 
+//----------------------------------------------------
+// e.g: @include size($width:100%, $height:100%);
+@mixin size($width:null, $height:null) {
+    width: $width;
+    height: $height;
+}
+
+// Font style
+//---------------------------------------------------
+@mixin font($style: null, $weight: null, $variant: null, $family: null, $size:null) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    font-variant: $variant;
+    font-family: $family;
+}
+
+//Padding style
+//--------------------------------------------------
+@mixin padding($top:null, $right:null, $left:null, $bottom:null) {
+    padding-top: $top;
+    padding-left: $left;
+    padding-right: $right;
+    padding-bottom: $bottom;
+}
+
+//Marging style
+//------------------------------------------------
+@mixin margin($top:null, $right:null, $left:null, $bottom:null) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    margin-right: $right;
+}
+
+// --------------------------------------------------
+// RGBA Background Opacity
+// --------------------------------------------------
+// eg: @include bg-opacity($color-dark, .2);
+@mixin bg-opacity($color, $opacity: 0.3) {
+    background: rgba($color, $opacity);
+}

@@ -1,0 +1,65 @@
+body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#preloader {
+    @include position(fixed, $top: 0, $left: 0);
+    @include size($width: 100%, $height: 100%);
+    background-color: $color-white;
+    z-index: 999;
+    transition: all .5s ease;
+    .loader {
+        display: block;
+        @include position(relative, $top: 50%, $left: 50%);
+        @include size($width: 150px, $height: 150px);
+        @include margin($top: -75px, $bottom: 0, $right: 0, $left: -75px);
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: $color-lightRed;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        &:before {
+            content: "";
+            @include position(absolute, $top: 5px, $left: 5px, $right: 5px, $bottom: 5px);
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: $color-lightRed;
+            animation: spin 3s linear infinite;
+        }
+        &:after {
+            @include position(absolute, $top: 15px, $left: 15px, $right: 15px, $bottom: 15px);
+            content: "";
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: $color-lightRed;
+            animation: spin 1.5s linear infinite;
+        }
+    }
+}
+
+@-webkit-keyframes spin {
+    From {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    To {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    From {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    To {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

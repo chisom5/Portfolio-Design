@@ -1,0 +1,20 @@
+.service-section {
+    @include position($position: relative, $top: 700px);
+    .container {
+        .services-detail {
+            border-radius: 4px;
+            border-bottom-right-radius: 20%;
+            background-color: $color-white;
+            box-shadow: 0px 1px 2px 0px rgba(90, 91, 95, 0.15);
+            transition: all 0.3s ease-in-out;
+            @include position($position: relative, $top: 0px);
+            @include padding($top: 60px, $bottom: 60px, $right: 40px, $left: 40px);
+            @include margin($top: 32px);
+            &:hover {
+                box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+                border-bottom-right-radius: 3px;
+                top: -5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.statistics-counting {
+    @include size($width: 100%);
+    @include position($position: relative, $top: 700px);
+    background: $color-lightRed;
+    @include padding($top: 0, $right: 0, $bottom: 0, $left: 0);
+    color: $color-white;
+    @include font($family: 'Montserrat' sans-serif);
+    text-align: center;
+    @include font($size: 14px);
+    .container .item {
+        @include size($width: 19%);
+        display: inline-block;
+        @include padding($top: 60px, $bottom: 60px, $left: 5px, $right: 5px);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        &:first-child {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .number {
+            @include font($weight: 700);
+            line-height: 100%;
+            @include font($size: 65px);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+#about {
+    overflow: hidden;
+    @include size($width: 100%);
+    @include position($position: relative, $top: 680px);
+    background: #f9f9f9;
+    .row {
+        .col-md-6 img {
+            @include position($position: absolute);
+            min-width: 113%;
+        }
+        .about-me {
+            overflow: hidden;
+            p {
+                color: $color-black;
+                @include padding($top: 50px, $bottom: 50px, $right: 50px, $left: 50px);
+                @include font($size: 15px);
+                line-height: 32px;
+            }
+            h2 {
+                @include padding($left: 50px, $right: 50px);
+            }
+        }
+    }
+}
+
+.section-space-padding {
+    @include padding($top: 100px, $bottom: 100px);
+}
